@@ -11,7 +11,7 @@
 <body>
     <main class="container">
         <div class="jumbotron">
-            
+
             <div id="carouselOffers" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -23,7 +23,7 @@
                     <p class="lead">
                       <a class="btn btn-primary btn-lg " href="#products" role="button">Start shopping</a>
                     </p>
-                  </div>    
+                  </div>
                 </div>
                 <div class="carousel-item">
                   <img class="d-block w-100" src="img/products/baby-yoda.svg" alt="Baby Yoda">
@@ -31,7 +31,7 @@
                 <div class="carousel-item">
                   <img class="d-block w-100" src="img/products/girl.svg" alt="Girl">
                 </div>
-                <!-- Todo: Dynamically add items here --> 
+                <!-- Todo: Dynamically add items here -->
               </div>
               <a class="carousel-control-prev" href="#carouselOffers" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -43,7 +43,7 @@
               </a>
             </div>
         </div>
-    
+
         </div>
         <section>
             <h2 id="products">Products</h2>
@@ -71,11 +71,82 @@
             </div>
         </nav>
     </header>
-    
+
+    <!-- Modal Product Info -->
+    <div class="modal fade" id="productInfoModal" tabindex="-1" role="dialog" aria-labelledby="productInfoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="productInfoLabel">Product Info</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+               <div id="carouselProductInfo" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="..." class="d-block w-100 image-one" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="..." class="d-block w-100 image-two" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductInfo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselProductInfo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <h4 class="card-title"></h4>
+                <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal Cart -->
+    <div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="cartLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="cartLabel">Cart</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div class="cart-product-list-container"></div>
+            <hr>
+            <div class="container">
+                <form class="form-contacts">
+                <div class="form-group row">
+                    <label for="client-name" class="col-4 col-form-label">Your name:</label>
+                    <input class="form-control col-8" type="text" id="client-name" required>
+                </div>
+                <div class="form-group row">
+                    <label for="client-email" class="col-4 col-form-label">Your email:</label>
+                    <input class="form-control col-8" type="email" id="client-email" required>
+                </div>
+                </form>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close-btn" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary order">Order</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
     <script src="js/alert-window.js"></script>
     <script src="js/cart.js"></script>
 </body>
